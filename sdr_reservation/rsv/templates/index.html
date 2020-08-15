@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>예약 현황</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+
+<style>
+  h1{
+    margin-left: 42.5%;
+  }
+  #calendar {
+    width: 90%;
+    margin-left: 4.9em;
+  }
+  #calendar a {
+    color:black;
+    background-color: white;
+    text-decoration: none;
+  }
+  #calendar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  #calendar li {
+    display: block;
+    float: left;
+    width: 14.342%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin-right: -1px;
+    margin-bottom: -1px;
+  }
+  #calendar ul.weekdays {
+    height: 40px;
+    background: white;
+  }
+  #calendar ul.weekdays li {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 20px;
+    border: none !important;
+    padding: 10px 6px;
+    margin-bottom: 10px;
+    color:black;
+    font-size: 16px;
+  }
+  a:link { color: red; text-decoration: none;}
+  a:visited { color: black; text-decoration: none;}
+  
+  h3{
+    margin: 2em;
+   }
+   .do{
+       margin-left: 4.3em;
+       font-size: 1.2em;
+   }
+  hr{
+    width: 90%;
+    border: black solid 0.02px;
+  }
+  .btn{
+    background-color: white;
+    border: rgb(177, 177, 177) 1px solid;
+    width: 100px;
+    height: 40px;
+    float: left;
+  }
+  .btn2{
+      margin-left: 5.3%;
+      width: 90%
+  }
+  .subbtn{
+      width: 180px;
+      height: 150px;
+      border: solid 0.5px rgb(177, 177, 177);
+      border-right: none;
+      border-bottom: none;
+      background-color: white;
+  }
+  .days{
+      float: left;
+      margin-bottom: 65%;
+      margin-left: 7%;
+
+  }
+  .subbtn:hover{
+      background-color: rgb(218, 214, 214);
+  }
+  
+  
+</style>
+</head>
+<body>
+  <header>
+    <h3 style="text-align: center;">룸 예약현황</h3>
+      <div class="do">
+        <button class="btn">
+          <a href="{% url 'create' %}">룸 예약하기</a>
+        </button>
+        <h1> 2020.08</h1>
+      </div>
+      <hr>
+</header>
+<div id="calendar-wrap">
+    <div id="calendar">
+        <ul class="weekdays">
+            <li>일요일</li>
+            <li>월요일</li>
+            <li>화요일</li>
+            <li>수요일</li>
+            <li>목요일</li>
+            <li>금요일</li>
+            <li>토요일</li>
+        </ul>
+      <!-- Days from previous month -->
+    </div>
+</div>
+<br>
+<a href="read.html" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"></a>
+<div class="btn2">
+    <span>
+        <button id="07_26" class="subbtn" a href="/07_26" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">26</div></button>
+        <button id="07_27" class="subbtn" a href="/07_27" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">27</div></button>
+        <button id="07_28" class="subbtn" a href="/07_28" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">28</div></button>
+        <button id="07_29" class="subbtn" a href="/07_29" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">29</div></button>
+        <button id="07_30" class="subbtn" a href="/07_30" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">30</div></button>
+        <button id="07_31" class="subbtn" a href="/07_31" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">31</div></button>
+        <button id="08_01" class="subbtn" a href="/08_01" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">01</div></button>
+       
+    </span>
+</div>
+<div class="btn2">
+    <span>
+        <button id="08_02" class="subbtn" a href="/08_02" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">02</div></button>
+        <button id="08_03" class="subbtn" a href="/08_03" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">03</div></button>
+        <button id="08_04" class="subbtn" a href="/08_04" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">04
+            {%for board in boards.all%}
+            <!-- <p class="title mt-5">{{board.m_d}}</p> -->
+            {%if board.m_d == "08_04"%}
+            <p class="title mt-5">{{board.name}}</p>
+            <p class="text mb-5">{{board.start_time}}</p>
+            <p class="text mb-5">{{board.end_time}}</p>
+            {%endif%}
+            {%endfor%} 
+        </div></button>
+        <button id="08_05" class="subbtn" a href="/08_05" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">05</div></button>
+        <button id="08_06" class="subbtn" a href="/08_06" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">06</div></button>
+        <button id="08_07" class="subbtn" a href="/08_07" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">07</div></button>
+        <button id="08_08" class="subbtn" a href="/08_08" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">08</div></button>
+       
+    </span>
+</div>
+<div class="btn2">
+    <span>
+        <button id="08_09" class="subbtn" a href="/08_09" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">09</div></button>
+        <button id="08_10" class="subbtn" a href="/08_10" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">10</div></button>
+        <button id="08_11" class="subbtn" a href="/08_11" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">11</div></button>
+        <button id="08_12" class="subbtn" a href="/08_12" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">12</div></button>
+        <button id="08_13" class="subbtn" a href="/08_13" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">13</div></button>
+        <button id="08_14" class="subbtn" a href="/08_14" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">14</div></button>
+        <button id="08_15" class="subbtn" a href="/08_15" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">15</div></button>
+       
+    </span>
+</div>
+<div class="btn2">
+    <span>
+        <button id="08_16" class="subbtn" a href="/08_16" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">16</div></button>
+        <button id="08_17" class="subbtn" a href="/08_17" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">17</div></button>
+        <button id="08_18" class="subbtn" a href="/08_18" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">18</div></button>
+        <button id="08_19" class="subbtn" a href="/08_19" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">19</div></button>
+        <button id="08_20" class="subbtn" a href="/08_20" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">20</div></button>
+        <button id="08_21" class="subbtn" a href="/08_21" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">21</div></button>
+        <button id="08_22" class="subbtn" a href="/08_22" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">22</div></button>
+       
+    </span>
+</div>
+<div class="btn2">
+    <span>
+        <button id="08_23" class="subbtn" a href="/08_23" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">23</div></button>
+        <button id="08_24" class="subbtn" a href="/08_24" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">24</div></button>
+        <button id="08_25" class="subbtn" a href="/08_25" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">25</div></button>
+        <button id="08_26" class="subbtn" a href="/08_26" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">26</div></button>
+        <button id="08_27" class="subbtn" a href="/08_27" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">27</div></button>
+        <button id="08_28" class="subbtn" a href="/08_28" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">28</div></button>
+        <button id="08_29" class="subbtn" a href="/08_29" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">29</div></button>
+       
+    </span>
+</div>
+<div class="btn2">
+    <span>
+        <button id="08_30" class="subbtn" a href="/08_30" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">30</div></button>
+        <button id="08_31" class="subbtn" a href="/08_31" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">31</div></button>
+        <button id="09_01" class="subbtn" a href="/09_01" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">01</div></button>
+        <button id="09_02" class="subbtn" a href="/09_02" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">02</div></button>
+        <button id="09_03" class="subbtn" a href="/09_03" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">03</div></button>
+        <button id="09_04" class="subbtn" a href="/09_04" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">04</div></button>
+        <button id="09_05" class="subbtn" a href="/09_05" onclick="window.open(this.href, '_blank', 'width=500px,height=500px,toolbars=no,scrollbars=no'); return false;"><div class="days">05</div></button>
+       
+    </span>
+</div>
+  
+</body>
+</html>

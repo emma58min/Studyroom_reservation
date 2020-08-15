@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팝업창</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        hr{
+            width: 90%;
+            border: rgb(223, 222, 222) 0.1px solid;
+            margin-top: 10%;
+            margin-bottom: 1em;
+        }
+        .header{
+            margin-top: 35px;
+            margin-left: 3%;
+        }
+        .content, .info, .memo{  
+            margin-bottom: 25px;
+            margin-left: 3%;
+            font-size: 12px;
+        }
+    </style>
+</head> 
+<body>
+    <div class="header">
+        {{read.start_date}} <!--팝업창 상단에 달력 클릭시 해당 일 표시-->
+    </div>
+    
+
+    <hr>
+    <div class="content"> <!--예약된 정보가 나오게끔 -->
+        <span>{{read.start_date}}</span>
+        <span>{{read.start_time}}~{{read.end_time}}</span> 
+    </div>
+    <div class="info">
+        {{read.name}}님 예약 완료 / {{read.phone_number}} / {{read.people}}
+        <br>
+    </div>
+    <div class="memo">
+        {{read.memo}}
+    </div>
+    <span>
+    <div class="col-md-auto">
+        <a href="/delete/{{read.id}}"><small>삭제</small></a>
+    </div>
+    </span>
+    <span>
+    <div class="col-md-auto">
+        <a href="/update/{{read.id}}"><small>수정</small></a>
+    </div>
+    </span>
+    <hr>
+    <div class="content">
+        <span>{{read.start_date}}</span>
+        <span>{{read.start_time}}~{{read.end_time}}</span> 
+    </div>
+    <div class="info">
+        {{read.name}} / {{read.phone_number}} / {{read.people}}
+        <br>
+    </div>
+    <div class="memo">
+        {{read.memo}}
+    </div>
+    <div class="col-md-auto">
+        <a href="/delete/{{read.id}}"><small>삭제</small></a>
+    </div>
+    </span>
+    <span>
+    <div class="col-md-auto">
+        <a href="/update/{{read.id}}"><small>수정</small></a>
+    </div>
+    
+</body>
+</html>
