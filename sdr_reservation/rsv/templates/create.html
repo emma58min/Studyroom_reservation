@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Document</title>
+    
+    
+    
     <style>
         h2{
             margin: 2em;
@@ -63,6 +66,11 @@
             margin-left: 6.7em;
             border: rgb(224, 222, 222) 1px solid;
         }
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
     </style>
 
 </head>
@@ -88,8 +96,17 @@
                 <div class="info">
                     <p>이름&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" class="name" name="name"></p>
                     <p>연락처&nbsp&nbsp&nbsp<input type="number" class="phone_number" name="phone_number"> &nbsp&nbsp&nbsp&nbsp ('-'없이 입력하시오)</p>
-                    <p>시작시간<input class="start_date" name="start_date" type='date' id='currentDate'/><input class="start_time" name="start_time" type="time" placeholder="시간선택" style="margin-left: 20px;"></p>
-                    <p>종료시간<input class="end_date" name="end_date" type="date" id='currentDate'/><input class="end_time" name="end_time" type="time" placeholder="시간선택" style="margin-left: 20px;"></p>
+                    <p>시작시간<input class="start_date" name="start_date" type='date' id='currentDate'/><input class="start_time" name="start_time" type="time" placeholder="시간선택" style="margin-left: 20px;" id="currentTime">
+                        <script>
+                            document.getElementById('currentTime').value = new Date().toISOString().slice(11, 16);
+                          </script></p>
+                    <p>종료시간<input class="end_date" name="end_date" type="date" id='now_Date'/><input class="end_time" name="end_time" type="time" placeholder="시간선택" style="margin-left: 20px;" id="now_Time">
+                        <script>
+                            document.getElementById('now_Time').value = new Date().toISOString().slice(11, 16);
+                          </script></p>
+                    <script>
+                        document.getElementById('now_Date').valueAsDate = new Date();
+                        </script>
                     <p>인원수
                         <select name="people" aria-placeholder="선택">
                             <option >선택안함</option>

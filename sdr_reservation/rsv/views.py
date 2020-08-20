@@ -26,9 +26,10 @@ def register(request):
     board.save()
     return redirect('../../')
 
-def read(request, board_id):
-    read = get_object_or_404(Board, pk=board_id)
-    return render(request, 'read.html', {'read': read})
+def read(request):
+    content = Board.objects
+    # read = get_object_or_404(Board, pk=board_id)
+    return render(request, 'read.html', {'boards':content})
 
 def delete(request, board_id):
     delete = get_object_or_404(Board, pk=board_id)

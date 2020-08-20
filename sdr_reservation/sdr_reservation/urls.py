@@ -25,8 +25,8 @@ urlpatterns = [
     path('create/', views.create, name='create'),
     #예약내용을 등록하기 위해 views.register로 넘어감
     path('create/register/', views.register, name='register'),
-
-    path('<int:board_id>/', views.read, name="read"),
+    path('read/', views.read, name="read"),
+    path('<int:board_m_d>/', views.read, name="read"),
     path('delete/<int:board_id>/', views.delete, name="delete"),
     path('update/<int:board_id>/', views.update, name="update"),
     path('up/<int:board_id>/', views.update_board),

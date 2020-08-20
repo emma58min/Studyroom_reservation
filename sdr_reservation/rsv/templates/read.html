@@ -23,6 +23,8 @@
     </style>
 </head> 
 <body>
+    {%for read in boards.all%}
+    {%if read.m_d == "08_04"%}
     <div class="header">
         {{read.start_date}} <!--팝업창 상단에 달력 클릭시 해당 일 표시-->
     </div>
@@ -70,6 +72,7 @@
     <div class="col-md-auto">
         <a href="/update/{{read.id}}"><small>수정</small></a>
     </div>
-    
+    {%endif%}
+    {%endfor%}
 </body>
 </html>
