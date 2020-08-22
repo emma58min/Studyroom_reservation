@@ -34,12 +34,12 @@
 </head> 
 <body>
     <div class="header">
-        {{read.start_date}} <!--팝업창 상단에 달력 클릭시 해당 일 표시-->
+        08월 24일 예약현황 <!--팝업창 상단에 달력 클릭시 해당 일 표시-->
     </div>
     <hr>
     <div>
         {%for read in boards.all%}
-        {%if read.m_d == "08_04"%}
+        {%if read.m_d == "08_23"%}
 
         <div class="content"> <!--예약된 정보가 나오게끔 -->
             예약 일시 :<span> &nbsp; {{read.start_date}} &nbsp; </span>

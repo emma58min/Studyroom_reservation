@@ -29,6 +29,7 @@ urlpatterns = [
     path('<int:board_m_d>/', views.read, name="read"),
     path('delete/<int:board_id>/', views.delete, name="delete"),
     path('update/<int:board_id>/', views.update, name="update"),
-    path('up/<int:board_id>/', views.update_board),
+    path('update/<int:board_id>/register/', views.update_board, name="update_board"),
+    # path('up/<int:board_id>/', views.update_board),
     
 ]

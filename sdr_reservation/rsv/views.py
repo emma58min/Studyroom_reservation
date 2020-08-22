@@ -52,4 +52,4 @@ def update_board(request, board_id):
     up.people = request.GET['people']
     up.memo = request.GET['memo']
     up.save()
-    return redirect('/'+str(board_id))    
+    return redirect('read')    
